@@ -19,7 +19,8 @@ The MVP runs entirely on Muse built in capabilities. Listening audio is synthesi
 
 - `SKILL.md` holds the method the agent follows.
 - `skill.yaml` is the Muse skill descriptor.
-- `references/` holds the exam format specs, the generation and validation rules, the scoring rubrics, the profile and personalization design, and notes on speech with Muse built in tools.
+- `references/` holds the format pack contract and the IELTS pack, the generation and validation rules, the profile and personalization design, and notes on speech with Muse built in tools. Exam specific content lives in format packs, so TOEFL and other exams can be added as two new reference files without touching the engine or the scripts.
+- Sessions scale from a full mock down to a quick drill of a single question, which runs through the same staged flow and is scored as a raw result without a band conversion.
 - `scripts/profile.py` manages the learner profile, the error log, the vocabulary list and session history.
 - `scripts/session.py` is the session and stage engine. It stores the hidden answer key, stage timestamps and deadlines, grades objective answers and closes sessions into history.
 - `templates/` holds example profile and blueprint files.

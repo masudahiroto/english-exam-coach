@@ -1,6 +1,6 @@
 # Exam formats
 
-The MVP ships one format pack, IELTS, structured so other exams can be added as new packs without changing the session engine. A format pack defines section order, timing, word counts, question types and scoring.
+This file is the formats half of the IELTS format pack. The pack contract and the index of packs live in [Format packs](format-packs.md), and other exams are added as new packs without changing the session engine.
 
 ## IELTS Listening
 
@@ -34,10 +34,11 @@ Task 2, at least 250 words, suggested 40 minutes. An essay responding to a point
 
 ## Session presets
 
+- Quick drill: a single question with material scaled to it, such as a 150 to 300 word passage or a 30 to 60 second listening script, with or without a timer, scored as a raw result only.
 - Single section: one slice as above, for daily practice of 10 to 25 minutes.
 - Half mock: one listening slice, one reading passage and one speaking part, about 45 minutes.
 - Full mock: all four skills at full length, about 2 hours 45 minutes plus scoring breaks, run only when the user asks for it.
 
 ## Adding another exam
 
-TOEFL, EIKEN and similar exams plug in as another pack with their own section specs and scoring file. The stage engine, the generation validation and the learner profile do not change.
+TOEFL, EIKEN and similar exams plug in as another pack, following the steps in [Format packs](format-packs.md). The stage engine, the generation validation and the learner profile do not change.

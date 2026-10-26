@@ -1,5 +1,7 @@
 # Scoring rubrics
 
+This file is the scoring half of the IELTS format pack, registered in [Format packs](format-packs.md). Other exams bring their own scoring file with their own scale and criteria.
+
 All scores from this skill are practice estimates. Say so whenever a band score is reported, and never present an estimate as a prediction of a real exam result.
 
 ## Listening and Reading

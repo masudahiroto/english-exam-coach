@@ -18,7 +18,9 @@
 
 - Read the learner profile and the recent error log before choosing anything, by running `python3 scripts/profile.py show` and `python3 scripts/profile.py errors --recent 20`.
 
-- Pick a blueprint first, with the exam format, the sections, the topics, the question types, the target difficulty and the time limits, following [Exam formats](references/exam-formats.md).
+- Load the format pack for the target exam before anything else, following [Format packs](references/format-packs.md), and let the pack supply the section specs and the scoring rules for this session.
+
+- Pick a blueprint first, with the exam format, the sections, the topics, the question types, the target difficulty and the time limits, following the section specs in the loaded format pack.
 
 - Bias the blueprint toward weak question types and recurring error patterns from the profile, while keeping coverage of the full question type range across sessions.
 
@@ -66,7 +68,7 @@
 
 - Receive the answer as a voice note and work from its transcript, noting that pronunciation scoring stays approximate because a transcript carries no intonation.
 
-- Score the answer with [Scoring rubrics](references/scoring-rubrics.md), then give the corrected version and a model answer at the target band.
+- Score the answer with the scoring file of the loaded format pack, then give the corrected version and a model answer at the target score.
 
 - Synthesize the model answer with `/opt/hatch/bin/tts`, invite a second recording of the same topic, and compare the two transcripts side by side.
 
@@ -74,7 +76,21 @@
 
 - Present the task with its word minimum and time limit and collect the essay as a chat message.
 
-- Score the essay with [Scoring rubrics](references/scoring-rubrics.md) and return a rewritten version at the target band with the main changes explained.
+- Score the essay with the scoring file of the loaded format pack and return a rewritten version at the target score with the main changes explained.
+
+## Run a quick drill
+
+- Treat a request for a single question, such as one reading question or one listening question, as a session with the preset `quick-drill` and run the same stage discipline at the smallest scale.
+
+- Scale the material to the question, with a reading passage of 150 to 300 words for one question, a listening script of 30 to 60 seconds for one or two questions, one speaking prompt, or one short writing task.
+
+- Start a stage timer only when the user asks for timed conditions, and otherwise present the material and the question in sequence without a deadline.
+
+- Grade the drill with `python3 scripts/session.py grade` like any objective section and report the raw result only, never a converted band score from a single item.
+
+- Log errors and vocabulary from drills the same way as full sessions, then close the drill session so the result still steers the next blueprint.
+
+- Chain another drill when the user asks for one more, creating a fresh session each time rather than extending a closed one.
 
 ## Score, review and adapt
 
