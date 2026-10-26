@@ -1,0 +1,16 @@
+# Learner data: profiles, sessions, audio, history. Never commit.
+data/*
+!data/.gitkeep
+
+# Generated audio outside the data folder
+*.mp3
+*.wav
+*.m4a
+
+# Python
+__pycache__/
+*.pyc
+
+# OS and editors
+.DS_Store
+*.swp

@@ -1,0 +1,5 @@
+name: english_exam_coach
+title: "English Exam Coach"
+description: "Run IELTS style practice tests with dynamically generated reading, listening, speaking and writing sections, timed stages, scoring and a learner profile that adapts future tests, using only Muse built in speech tools."
+category: "Education"
+include_in_prompt: true
