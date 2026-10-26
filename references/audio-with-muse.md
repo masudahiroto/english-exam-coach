@@ -4,9 +4,9 @@ The MVP uses only Muse built in speech tools. No external speech account, API ke
 
 ## Speech synthesis for listening
 
-- Synthesize with `/opt/hatch/bin/tts speak`, which writes an MP3 file and needs no account connection.
-- Use `--voice` for one speaker, and add `--voice2` with `--voice-prefix` and `--voice-prefix2` for a two speaker dialogue.
-- Use `/opt/hatch/bin/tts synthesize-script` with a saved script and one `--speaker` per label when a section needs more than two speakers or a long monologue split into chunks.
+- Synthesize monologues with `/opt/hatch/bin/tts speak` and `--voice`, which writes an MP3 file and needs no account connection.
+- Synthesize every dialogue with `/opt/hatch/bin/tts synthesize-script`, a saved script file and one `--speaker Name=voice_id` mapping per speaker. Speaker labels in the script are routing information for the synthesizer and are never spoken.
+- Never put speaker labels in text sent to `speak`, and never use the `speak` two voice prefix options for exam dialogues. An early sample made that way read the labels aloud and rendered the whole dialogue in a single voice.
 - Set `--language en` for English material and use `--speed` between 1 and 200 to slow practice audio or match a harder target pace. The default is 100.
 - Spell out numbers, dates and abbreviations in the script the way they should be heard, because the synthesizer reads what it is given.
 

@@ -54,7 +54,7 @@
 
 ### Listening
 
-- Turn the generated script into audio with `/opt/hatch/bin/tts`, casting voices by accent and gender from the voice catalog as described in [Audio with Muse](references/audio-with-muse.md).
+- Turn the generated script into audio with `/opt/hatch/bin/tts`, using script synthesis for dialogues so each speaker keeps their own voice and speaker labels are never spoken, as described in [Audio with Muse](references/audio-with-muse.md).
 
 - Attach the audio file in chat without the script, and hold the questions until the user says they have finished listening or the timer fires.
 
